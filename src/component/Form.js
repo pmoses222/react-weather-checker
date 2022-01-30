@@ -7,6 +7,7 @@ function Form({handleChange,searchQuery,city,query}) {
     
     return (
         <div className ="form-container">
+             {(query.cod === 404)?(<p>{query.message}</p>):("")} 
             <div className="navigation">
                     
                     <div className="form" >
@@ -23,7 +24,7 @@ function Form({handleChange,searchQuery,city,query}) {
                                   <i class="fas fa-search icon"></i>
                                </button>
 
-                               {(query.cod ==="404")?(<p>No such location is Found Anywhere</p>):("")} 
+                              
                         </div>
                             
                     </div>
